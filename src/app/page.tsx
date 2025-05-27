@@ -18,7 +18,7 @@ export default function Home() {
     formData.append('resume', file);
     setLoading(true);
     try {
-      const res = await fetch('https://https://cv-judge.onrender.com/api/roast', {
+      const res = await fetch('https://cv-judge.onrender.com/api/roast', {
         method: 'POST',
         body: formData,
       });
