@@ -88,7 +88,7 @@ export default function ResumeRoaster() {
             <>
               <div>
                 <h2 className="text-lg font-semibold text-orange-700 mb-2">
-                  📣 Here's what the AI thinks:
+                  📣 Here&apos;s what the AI thinks:
                 </h2>
                 <Textarea
                   className="w-full h-60 text-sm border border-orange-300 bg-orange-50"
