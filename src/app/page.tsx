@@ -24,7 +24,7 @@ export default function Home() {
       });
       const data = await res.json();
       setFeedback(data.feedback);
-    } catch (err) {
+    } catch {
       setFeedback('Something went wrong.');
     } finally {
       setLoading(false);
