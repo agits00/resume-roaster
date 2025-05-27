@@ -35,6 +35,15 @@ export default function ResumeRoaster() {
       gtag('config', 'G-HFXJXFR0FZ');
     `;
     document.head.appendChild(inlineScript);
+
+    // Safely trigger AdSense after script load
+    try {
+      if (window.adsbygoogle && Array.isArray(window.adsbygoogle)) {
+        window.adsbygoogle.push({});
+      }
+    } catch (e) {
+      console.warn('AdSense push failed', e);
+    }
   }, []);
 
   const handleUpload = async () => {
@@ -107,9 +116,6 @@ export default function ResumeRoaster() {
                   data-ad-format="auto"
                   data-full-width-responsive="true"
                 ></ins>
-                <script>
-                  {(window.adsbygoogle = window.adsbygoogle || []).push({})}
-                </script>
               </div>
             </>
           )}
