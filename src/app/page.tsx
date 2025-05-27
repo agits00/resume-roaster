@@ -56,14 +56,19 @@ export default function ResumeRoaster() {
 
   return (
     <div className="max-w-2xl mx-auto mt-10 p-4">
-      <Card>
-        <CardContent className="space-y-4">
-          <h1 className="text-2xl font-bold">Resume Roaster</h1>
-          <p>Upload your resume and get an honest, AI-powered critique.</p>
+      <Card className="shadow-xl border border-orange-300">
+        <CardContent className="space-y-6 p-6">
+          <h1 className="text-4xl font-bold text-center text-orange-600">
+            🔥 Resume Roaster 🔥
+          </h1>
+          <p className="text-center text-gray-700">
+            Upload your resume and get a brutally honest, AI-powered critique. No fluff — just 🔥 feedback.
+          </p>
 
           <Input
             type="file"
             accept=".pdf,.doc,.docx"
+            className="border-orange-400 focus:border-orange-600"
             onChange={(e) => {
               if (e.target.files && e.target.files.length > 0) {
                 setFile(e.target.files[0]);
@@ -71,17 +76,26 @@ export default function ResumeRoaster() {
             }}
           />
 
-          <Button onClick={handleUpload} disabled={loading}>
-            {loading ? "Roasting..." : "Roast my Resume"}
+          <Button
+            onClick={handleUpload}
+            disabled={loading}
+            className="bg-orange-500 hover:bg-orange-600 w-full"
+          >
+            {loading ? "🔥 Roasting..." : "Roast My Resume"}
           </Button>
 
           {response && (
             <>
-              <Textarea
-                className="w-full h-60"
-                value={response}
-                readOnly
-              />
+              <div>
+                <h2 className="text-lg font-semibold text-orange-700 mb-2">
+                  📣 Here's what the AI thinks:
+                </h2>
+                <Textarea
+                  className="w-full h-60 text-sm border border-orange-300 bg-orange-50"
+                  value={response}
+                  readOnly
+                />
+              </div>
 
               {/* Google AdSense Ad Unit */}
               <div className="mt-6">
