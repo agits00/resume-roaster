@@ -24,7 +24,7 @@ export default function ResumeRoaster() {
     // Google Analytics script
     const gaScript = document.createElement('script');
     gaScript.setAttribute('async', '');
-    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-HFXJXFR0FZ';
     document.head.appendChild(gaScript);
 
     const inlineScript = document.createElement('script');
@@ -32,7 +32,7 @@ export default function ResumeRoaster() {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      gtag('config', 'G-HFXJXFR0FZ');
     `;
     document.head.appendChild(inlineScript);
   }, []);
